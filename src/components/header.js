@@ -1,42 +1,31 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import '../styles/header.scss'
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = ({ siteTitle }) => {
+  return (
+    <header className="header">
+      <nav className="nav">
+        <div className="container nav__container">
+          <h2 className="logo">{siteTitle}</h2>
+          <ul className="nav-bar">
+            <li className="nav-item">
+              <a href="/" className="nav-link">home</a>
+            </li>
+            <li className="nav-item">
+              <a href="#about" className="nav-link">about</a>
+            </li>
+            <li className="nav-item">
+              <a href="#projects" className="nav-link">projects</a>
+            </li>
+            <li className="nav-item">
+              <a href="#contact" className="nav-link">contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  )
 }
 
 export default Header

@@ -1,0 +1,45 @@
+.header {
+    background: url(../images/hero-img.jpg) bottom left no-repeat;
+    width: 100%;
+    
+    
+    .nav {
+    grid-area: nav;
+    
+        &__container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 1rem 1rem 0;
+
+            .logo {
+                color: #fefefe;
+            }
+
+            .nav-bar {
+                display: flex;
+                justify-content: space-evenly;
+                list-style-type: none;
+
+                .nav-item {
+                    margin-right: 1rem;
+                    margin-bottom: 0;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    .nav-link {
+                        text: {
+                            transform: uppercase;
+                            decoration: none;
+                        }
+                        color: #fefefe
+                    }
+                }
+            }
+        }
+    }
+}
