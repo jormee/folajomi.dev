@@ -52,6 +52,25 @@
                             decoration: none;
                         }
                         color: $primaryFont;
+
+                        &:hover {
+                            background: $borderGradient;
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+
+                        .active {
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: inherit;
+                                height: 3px;
+                                background: $borderGradient;
+                            }
+                        }
                     }
                 }
             }
@@ -104,7 +123,7 @@
             overflow: hidden;
 
             .title {
-                margin-right: 1rem;
+                margin-right: 2rem;
                 color: $secondaryFont;
                 position: relative;
                 text-transform: uppercase;
@@ -116,11 +135,11 @@
                 &::after {
                     content: "*";
                     position: absolute;
-                    top: 25%;
-                    left: 103%;
+                    top: 15%;
+                    left: 105%;
                     color: $primaryFont;
-                    font-size: 1.3rem;
-                    
+                    font-size: 1.5rem;
+                    animation: beat 2s forwards infinite;
                 }
 
                 &:last-child::after {

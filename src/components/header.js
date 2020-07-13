@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'gatsby'
 import Headroom from 'react-headroom'
 
 import GitHub from "../icons/github.svg"
@@ -16,16 +17,16 @@ const Header = ({ siteTitle }) => {
             <h2 className="logo">{siteTitle}</h2>
             <ul className="nav-bar">
               <li className="nav-item">
-                <a href="/" className="nav-link">home</a>
+                <Link to="/" className="nav-link" activeClassName="active">home</Link>
               </li>
               <li className="nav-item">
-                <a href="#about" className="nav-link">about</a>
+                <Link to="#about" className="nav-link" activeClassName="active">about</Link>
               </li>
               <li className="nav-item">
-                <a href="#projects" className="nav-link">projects</a>
+                <Link to="#projects" className="nav-link" activeClassName="active">projects</Link>
               </li>
               <li className="nav-item">
-                <a href="#contact" className="nav-link">contact</a>
+                <Link to="#contact" className="nav-link" activeClassName="active">contact</Link>
               </li>
             </ul>
           </div>
