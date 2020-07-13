@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        width: 70%;
+    }
+}

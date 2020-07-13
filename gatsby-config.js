@@ -4,6 +4,7 @@ module.exports = {
     description: `A dive into the world of Folajomi Shotunde, UI/UX Web developer. Creaed with GatsbyJS`,
     author: `Folajomi Shotunde`
   },
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -12,6 +13,14 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /icons/
+        }
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
