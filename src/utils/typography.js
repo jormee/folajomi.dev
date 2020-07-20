@@ -7,7 +7,8 @@ oceanBeach.overrideThemeStyles = ({ rhythm }, options) => ({
     },
     "a": {
         "backgroundImage": "none",
-        "textShadow": "none"
+        "textShadow": "none",
+        "color": "unset",
     },
     "h1, h2, h3, h4, h5, h5": {
         "margin": "0",

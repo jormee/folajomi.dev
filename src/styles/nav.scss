@@ -1,0 +1,150 @@
+@import 'typography';
+@import 'animations';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .nav {
+        width: 100%;
+        height: 100vh;    
+        background-image: $borderGradient;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        color: $primaryFont;
+        padding: 2rem;
+        transition: left .6s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        &-bar {
+            list-style-type: none;
+            margin-left: 0;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            animation: fade 1s forwards
+                             slide-up 1s forwards;
+
+            .nav-item {
+                .nav-link {
+                    text-transform: uppercase;
+                    font: {
+                        size: 1.5rem;
+                        weight: 500;
+                    }
+
+                    &.active {
+                        position: relative;
+    
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 100%;
+                            height: .3rem;
+                            background-color: $primaryFont;
+                        }
+                    }
+                }
+            }
+        }
+
+        .sidebar-toggle {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            margin: 1rem;
+            top: 1rem;
+            right: 0;
+            z-index: 2;
+            cursor: pointer;
+
+            .bar {
+                width: 3rem;
+                height: .3rem;
+                background-color: $primaryFont;
+                transition: transform .6s ease;
+                margin-bottom: .5rem;
+                position: relative;
+            }
+        }
+
+        &.close {
+            left: -100%;
+            
+            .bar {
+                background: $borderGradient;
+
+                &:first-child {
+                    transform: rotate(45deg)
+                                      translateY(0.5rem);
+                }
+    
+                &:nth-child(2) {
+                    display: none;
+                }
+    
+                &:last-child {
+                    transform: rotate(-45deg)
+                                      translateY(-0.5rem);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .headroom {
+        background: #000000;
+
+        .header {
+            align-items: baseline;
+            color: $primaryFont;
+
+            .nav {
+                position: relative;
+                width: initial;
+                height: initial;
+                background: inherit;
+                color: inherit;
+                padding: 1rem 0 0 0;
+
+                &-bar {
+                    flex-direction: row;
+
+                    .nav-item {
+                        margin-right: 1rem;
+
+                        &:last-child{
+                            margin-right: 0;
+
+                        }
+                        .nav-link {
+                            font-size: 1rem;
+
+                            &.active::after {
+                                background-image: $borderGradient;
+                            }
+                        }
+                    }
+                }
+
+                &.close {
+                    left: initial;
+                }
+
+                .sidebar-toggle {
+                    display: none;
+                }
+            }
+
+        }
+    }
+}

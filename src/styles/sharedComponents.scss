@@ -1,17 +1,17 @@
 .container {
-    width: 100%;
+    width: 90%;
     margin: auto;
 }
 
 @media screen and (min-width: 600px) {
     .container {
-        width: 90%;
+        width: 80%;
     }
 }
 
 @media screen and (min-width: 900px) {
     .container {
-        width: 80%;
+        width: 70%;
     }
 }
 
