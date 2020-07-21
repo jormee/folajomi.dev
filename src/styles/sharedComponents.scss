@@ -2,7 +2,7 @@
 
 a:focus {
     outline: none;
-    border: 3px double $primaryFont;
+    border: thin solid $primaryFont;
 }
 
 .container {

@@ -36,3 +36,80 @@
         transform: scale(1);
     }
 }
+
+@keyframes titles {
+    0% {
+        opacity: 0;
+        content: 'Project Manager';
+    }
+
+    7% {
+        content: 'Project Manager';
+        opacity: 1;
+    }
+
+    14% {
+        content: 'Project Manager';
+        opacity: 0;
+    }
+
+    21% {
+        content: 'Front End Developer';
+        opacity: 0;
+    }
+
+    28% {
+        content: 'Front End Developer';
+        opacity: 1;
+    }
+
+    35% {
+        content: 'Front End Developer';
+        opacity: 0;
+    }
+
+    42% {
+        content: 'Technical Writer';
+        opacity: 0;
+    }
+
+    49% {
+        content: 'Technical Writer';
+        opacity: 1;
+    }
+
+    58% {
+        content: 'Technical Writer';
+        opacity: 0;
+    }
+
+    65% {
+        content: 'Crypto Enthusiast';
+        opacity: 0;
+    }
+
+    72% {
+        content: 'Crypto Enthusiast';
+        opacity: 1;
+    }
+
+    79% {
+        content: 'Crypto Enthusiast';
+        opacity: 0;
+    }
+
+    86% {
+        content: 'UI/UX Designer (Newbie)';
+        opacity: 0;
+    }
+
+    93% {
+        content: 'UI/UX Designer (Newbie)';
+        opacity: 1;
+    }
+
+    100% {
+        content: 'UI/UX Designer (Newbie)';
+        opacity: 0;
+    }
+}

@@ -1,118 +1,123 @@
 @import 'typography';
 @import 'animations';
 
-.header {
-    position: relative;
-    padding: 1rem;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+.headroom {
+    background-color: black;
+    color: $primaryFont;
 
-    .logo {
-        z-index: 10;
-    }
-
-    .nav {
-        position: fixed;
+    .header {
+        position: relative;
+        padding: 1rem;
         top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background-image: $borderGradient;
-        color: $primaryFont;
-        z-index: 1;
-        visibility: hidden;
-        transition: left .6s ease,
-                          visibility .6s .2s ease;
+        left: 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
 
-        &-bar {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            height: 100%;
-            margin-left: 0;
+        .logo {
+            z-index: 10;
+        }
 
-            .nav-item {
-                width: 40%;
-                display: none;
-                animation: slide-up 1s .2s forwards,
-                                 fade 1s .2s forwards;
-                
-                .nav-link {
-                    position: relative;
-                    text-transform: uppercase;
-                    font-size: 1.5rem;
-                    text-align: left;
+        .nav {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background-image: $borderGradient;
+            color: $primaryFont;
+            z-index: 1;
+            visibility: hidden;
+            transition: left .6s ease,
+                            visibility .6s .2s ease;
 
-                    &.active {
+            &-bar {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                height: 100%;
+                margin-left: 0;
+
+                .nav-item {
+                    width: 40%;
+                    display: none;
+                    animation: slide-up 1s .2s forwards,
+                                    fade 1s .2s forwards;
+                    
+                    .nav-link {
                         position: relative;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        text-align: left;
 
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            top: 100%;
-                            left: 0;
-                            width: 100%;
-                            height: .3rem;
-                            background-color: $primaryFont;
+                        &.active {
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 100%;
+                                left: 0;
+                                width: 100%;
+                                height: .3rem;
+                                background-color: $primaryFont;
+                            }
                         }
                     }
                 }
-            }
 
-        }
-
-        & + .sidebar-toggle {
-            position: absolute;
-            top: 2rem;
-            right: 1rem;
-            z-index: 2;
-            cursor: pointer;
-
-            .bar {
-                position: relative;
-                top: 0;
-                left: 0;
-                width: 3rem;
-                height: .3rem;
-                margin-bottom: .5rem;
-                background-image: $borderGradient;
-                transition: transform .6s ease,
-                                  top .6s ease,
-                                  background .6s ease;
-            }
-        }
-
-        &.open {
-            left: 0;
-            visibility: visible;
-
-            .nav-item {
-                display: block
             }
 
             & + .sidebar-toggle {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                z-index: 2;
+                cursor: pointer;
+
                 .bar {
-                    background-color: $primaryFont;
-                    background-image: none;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 3rem;
+                    height: .3rem;
+                    margin-bottom: .5rem;
+                    background-image: $borderGradient;
+                    transition: transform .6s ease,
+                                    top .6s ease,
+                                    background .6s ease;
+                }
+            }
 
-                    &:first-child {
-                        transform: rotate(45deg);
-                        top: .5rem;
-                    }
+            &.open {
+                left: 0;
+                visibility: visible;
 
-                    &:last-child {
-                        transform: rotate(-45deg);
-                        top: -.5rem;
-                    }
+                .nav-item {
+                    display: block
+                }
 
-                    &:nth-child(2) {
-                        display: none;
-                        visibility: hidden;
+                & + .sidebar-toggle {
+                    .bar {
+                        background-color: $primaryFont;
+                        background-image: none;
+
+                        &:first-child {
+                            transform: rotate(45deg);
+                            top: .5rem;
+                        }
+
+                        &:last-child {
+                            transform: rotate(-45deg);
+                            top: -.5rem;
+                        }
+
+                        &:nth-child(2) {
+                            display: none;
+                            visibility: hidden;
+                        }
                     }
                 }
             }
@@ -152,7 +157,7 @@
     
                         .nav-link {
                             font-size: .9rem;
-                            padding: .5rem .5rem 0;
+                            padding: .5rem 0 0;
 
 
                             &::after {
