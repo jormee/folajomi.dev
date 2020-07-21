@@ -1,7 +1,7 @@
 import React, { useState, createContext } from 'react'
 
 const navState = {
-    sidebarOpen: true
+    sidebarOpen: false
 }
 
 export const NavContext = createContext(navState)

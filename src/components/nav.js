@@ -7,7 +7,7 @@ import '../styles/nav.scss'
 
 const Nav = ({ siteTitle }) => {
     const { sidebarOpen, toggleSidebar } = useContext(NavContext)
-    const sidebar = sidebarOpen ? 'open' : 'close'
+    const sidebar = sidebarOpen ? 'open' : ''
 
     return(
         <Headroom>
@@ -33,12 +33,12 @@ const Nav = ({ siteTitle }) => {
                         </li>
 
                     </ul>
-                    <div className="sidebar-toggle" onClick={toggleSidebar}>
-                        <span className="bar" id="1"></span>
-                        <span className="bar" id="2"></span>
-                        <span className="bar" id="3"></span>
-                    </div>
                 </nav>
+                <div className="sidebar-toggle" onClick={toggleSidebar}>
+                    <div className="bar" id="1"></div>
+                    <div className="bar" id="2"></div>
+                    <div className="bar" id="3"></div>
+                </div>
             </header>
         </Headroom>
     )

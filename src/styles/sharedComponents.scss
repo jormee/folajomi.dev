@@ -1,3 +1,10 @@
+@import 'typography';
+
+a:focus {
+    outline: none;
+    border: 3px double $primaryFont;
+}
+
 .container {
     width: 90%;
     margin: auto;

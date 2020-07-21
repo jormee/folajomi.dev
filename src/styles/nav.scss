@@ -2,46 +2,55 @@
 @import 'animations';
 
 .header {
+    position: relative;
+    padding: 1rem;
+    top: 0;
+    left: 0;
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
+    justify-content: space-between;
+
+    .logo {
+        z-index: 10;
+    }
 
     .nav {
-        width: 100%;
-        height: 100vh;    
-        background-image: $borderGradient;
         position: fixed;
         top: 0;
-        left: 0;
-        z-index: 1;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-image: $borderGradient;
         color: $primaryFont;
-        padding: 2rem;
-        transition: left .6s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    
+        z-index: 1;
+        visibility: hidden;
+        transition: left .6s ease,
+                          visibility .6s .2s ease;
+
         &-bar {
-            list-style-type: none;
-            margin-left: 0;
-            margin: auto;
             display: flex;
             flex-direction: column;
-            animation: fade 1s forwards
-                             slide-up 1s forwards;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            height: 100%;
+            margin-left: 0;
 
             .nav-item {
+                width: 40%;
+                display: none;
+                animation: slide-up 1s .2s forwards,
+                                 fade 1s .2s forwards;
+                
                 .nav-link {
+                    position: relative;
                     text-transform: uppercase;
-                    font: {
-                        size: 1.5rem;
-                        weight: 500;
-                    }
+                    font-size: 1.5rem;
+                    text-align: left;
 
                     &.active {
                         position: relative;
-    
+
                         &::after {
                             content: '';
                             position: absolute;
@@ -54,46 +63,57 @@
                     }
                 }
             }
+
         }
 
-        .sidebar-toggle {
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            margin: 1rem;
-            top: 1rem;
-            right: 0;
+        & + .sidebar-toggle {
+            position: absolute;
+            top: 2rem;
+            right: 1rem;
             z-index: 2;
             cursor: pointer;
 
             .bar {
+                position: relative;
+                top: 0;
+                left: 0;
                 width: 3rem;
                 height: .3rem;
-                background-color: $primaryFont;
-                transition: transform .6s ease;
                 margin-bottom: .5rem;
-                position: relative;
+                background-image: $borderGradient;
+                transition: transform .6s ease,
+                                  top .6s ease,
+                                  background .6s ease;
             }
         }
 
-        &.close {
-            left: -100%;
-            
-            .bar {
-                background: $borderGradient;
+        &.open {
+            left: 0;
+            visibility: visible;
 
-                &:first-child {
-                    transform: rotate(45deg)
-                                      translateY(0.5rem);
-                }
-    
-                &:nth-child(2) {
-                    display: none;
-                }
-    
-                &:last-child {
-                    transform: rotate(-45deg)
-                                      translateY(-0.5rem);
+            .nav-item {
+                display: block
+            }
+
+            & + .sidebar-toggle {
+                .bar {
+                    background-color: $primaryFont;
+                    background-image: none;
+
+                    &:first-child {
+                        transform: rotate(45deg);
+                        top: .5rem;
+                    }
+
+                    &:last-child {
+                        transform: rotate(-45deg);
+                        top: -.5rem;
+                    }
+
+                    &:nth-child(2) {
+                        display: none;
+                        visibility: hidden;
+                    }
                 }
             }
         }
@@ -102,49 +122,52 @@
 
 @media screen and (min-width: 750px) {
     .headroom {
-        background: #000000;
+        background-color: black;
+        color: $primaryFont;
 
         .header {
-            align-items: baseline;
-            color: $primaryFont;
+            padding: 1rem 0 0;
 
             .nav {
                 position: relative;
                 width: initial;
                 height: initial;
-                background: inherit;
-                color: inherit;
-                padding: 1rem 0 0 0;
-
+                left: 0;
+                background-image: none;
+                visibility: visible;
+    
                 &-bar {
                     flex-direction: row;
-
+                    justify-content: space-evenly;
+    
                     .nav-item {
                         margin-right: 1rem;
-
-                        &:last-child{
+                        margin-bottom: 0;
+                        display: block;
+                        animation: none;
+    
+                        &:last-child {
                             margin-right: 0;
-
                         }
+    
                         .nav-link {
-                            font-size: 1rem;
+                            font-size: .9rem;
+                            padding: .5rem .5rem 0;
 
-                            &.active::after {
-                                background-image: $borderGradient;
+
+                            &::after {
+                                height: .2rem;
                             }
                         }
                     }
                 }
-
-                &.close {
-                    left: initial;
-                }
-
-                .sidebar-toggle {
-                    display: none;
-                }
             }
-
+    
+            .sidebar-toggle {
+                display: none;
+                visibility: hidden;
+            }
         }
+
     }
 }
