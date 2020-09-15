@@ -1,0 +1,133 @@
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0)
+    }
+    to {
+        scale: (1)
+    }
+}
+
+@keyframes vertical-slide {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes horizontal-slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes titles {
+    0% {
+        opacity: 0;
+        content: 'Project Manager';
+    }
+
+    7% {
+        content: 'Project Manager';
+        opacity: 1;
+    }
+
+    14% {
+        content: 'Project Manager';
+        opacity: 0;
+    }
+
+    21% {
+        content: 'Front End Developer';
+        opacity: 0;
+    }
+
+    28% {
+        content: 'Front End Developer';
+        opacity: 1;
+    }
+
+    35% {
+        content: 'Front End Developer';
+        opacity: 0;
+    }
+
+    42% {
+        content: 'Technical Writer';
+        opacity: 0;
+    }
+
+    49% {
+        content: 'Technical Writer';
+        opacity: 1;
+    }
+
+    58% {
+        content: 'Technical Writer';
+        opacity: 0;
+    }
+
+    65% {
+        content: 'Crypto Enthusiast';
+        opacity: 0;
+    }
+
+    72% {
+        content: 'Crypto Enthusiast';
+        opacity: 1;
+    }
+
+    79% {
+        content: 'Crypto Enthusiast';
+        opacity: 0;
+    }
+
+    86% {
+        content: 'UI/UX Designer';
+        opacity: 0;
+    }
+
+    93% {
+        content: 'UI/UX Designer';
+        opacity: 1;
+    }
+
+    100% {
+        content: 'UI/UX Designer';
+        opacity: 0;
+    }
+}

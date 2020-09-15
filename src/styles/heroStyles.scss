@@ -1,0 +1,82 @@
+@import 'typography';
+@import 'animations';
+
+.hero-section {
+    background-image: url(../images/hero-img.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: $primaryFont;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+        z-index: -1;
+    }
+
+    .flex-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .name {
+            font:  {
+                family: 'Do Hyeon', sans-serif;
+                size: 1.5rem;
+                weight: 700;
+            }
+            letter-spacing: .5rem;
+            text-align: center;
+        }
+
+        .titles {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 3rem;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 1rem;
+                left: 0;
+                width: 100%;
+                color: $secondaryFont;
+                animation: titles 15s 1s forwards infinite;
+                font: {
+                    family: 'Satisfy', cursive;
+                    weight: 500;
+                    size: 1.5rem;
+                }
+            }
+        }
+
+        .socials {
+            margin-top: 1rem;
+            .social-icon  {
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                svg {
+                    fill: $secondaryFont;
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+}
+
+// when width is less than 285px .name font size should be 1rem/letter spacing should reduce to .2rem
