@@ -2,3 +2,11 @@
   - nav:  background color (white in light theme and black in dark); Logo is to be switched between themes
   - main: get a patterned background for light theme and plain black for dark theme.
   -Footer: same as main.
+
+  2. download CV button on the home and about pages
+  3. Add social media to nav component
+  4. Fix project links size and alignment on project cards - Portfolio
+  5. Fix Footer font color.
+  6. Add contact form.
+  7. Add talks pages.
+  8. Add 404 page.

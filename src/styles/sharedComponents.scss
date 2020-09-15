@@ -22,14 +22,14 @@ a{
     overflow: hidden;
 
     .section-img {
-        animation: fade 1s ease forwards;
+        animation: fade 2s ease forwards;
     }
 
     .page-description {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        animation: vertical-slide 1s  ease forwards;
+        animation: vertical-slide 2s  ease forwards;
 
         .page-title {
             text-align: center;
@@ -69,8 +69,8 @@ a{
         
             .section-img {
                 width: 60%;
-                animation: horizontal-slide 1s ease forwards,
-                                  fade 1s  ease forwards;
+                animation: horizontal-slide 2s ease forwards,
+                                  fade 2s  ease forwards;
             }
         
             .page-description {
