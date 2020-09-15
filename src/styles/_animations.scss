@@ -16,9 +16,27 @@
     }
 }
 
-@keyframes slide-up {
+@keyframes vertical-slide {
     from {
         transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes horizontal-slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
     }
     to {
         transform: translateY(0);
@@ -99,17 +117,17 @@
     }
 
     86% {
-        content: 'UI/UX Designer (Newbie)';
+        content: 'UI/UX Designer';
         opacity: 0;
     }
 
     93% {
-        content: 'UI/UX Designer (Newbie)';
+        content: 'UI/UX Designer';
         opacity: 1;
     }
 
     100% {
-        content: 'UI/UX Designer (Newbie)';
+        content: 'UI/UX Designer';
         opacity: 0;
     }
 }

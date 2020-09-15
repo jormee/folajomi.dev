@@ -1,0 +1,61 @@
+@import "typography";
+@import "animations";
+
+
+.project-cards {
+  list-style-type: none;
+  margin-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  animation: fade 3s ease forwards;
+
+  .project-card {
+    height: 300px;
+  
+    .project-image {
+      margin-bottom: 0;
+      border-radius: 10px 10px 0 0;
+      height: 50%;
+      width: 100%;;
+    }
+  
+    .project-details {
+      padding: 0 .5rem;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+  
+      .project-title {
+        text-align: center;
+        margin: .5rem auto;
+        font-family: $Do-Hyeon;
+        color: $secondaryFont;
+        height: 20%;
+      }
+  
+      .project-description {
+        line-height: 1.5rem;
+        text-align: center;
+        font-size: .9rem;
+        height: 60%;
+      }
+  
+      .project-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 60%;
+        
+        svg {
+          fill: $secondaryFont;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+}

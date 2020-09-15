@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Folajomi`,
@@ -13,6 +17,40 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: `${process.env.GATSBY_GITHUB_ACCESS_TOKEN}`,
+        variables: {},
+        graphQLQuery: `
+          query{
+            user (login: "jormee"){
+              pinnedItems(types: REPOSITORY, first: 10){
+                edges{
+                  node{
+                    ... on Repository {
+                      name
+                      description
+                      url
+                      homepageUrl
+                      repositoryTopics(first: 5){
+                        edges{
+                          node{
+                            topic{
+                              name
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `
+      }
     },
     {
       resolve: `gatsby-plugin-react-svg`,

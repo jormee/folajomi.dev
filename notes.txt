@@ -1,0 +1,4 @@
+1. Add color theme to project
+  - nav:  background color (white in light theme and black in dark); Logo is to be switched between themes
+  - main: get a patterned background for light theme and plain black for dark theme.
+  -Footer: same as main.

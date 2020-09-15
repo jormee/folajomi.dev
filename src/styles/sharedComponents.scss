@@ -1,8 +1,15 @@
 @import 'typography';
+@import 'animations';
 
-a:focus {
-    outline: none;
-    border: thin solid $primaryFont;
+a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    color: $secondaryFont;
+    &:focus {
+        outline: none;
+        border: thin solid $primaryFont;
+    }
 }
 
 .container {
@@ -10,9 +17,75 @@ a:focus {
     margin: auto;
 }
 
+.section-header {
+    height: 95vh;
+    overflow: hidden;
+
+    .section-img {
+        animation: fade 1s ease forwards;
+    }
+
+    .page-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation: vertical-slide 1s  ease forwards;
+
+        .page-title {
+            text-align: center;
+            color: $secondaryFont;
+            font-family: $Satisfy;
+            margin-bottom: 2rem;
+        }
+
+        .section-description {
+            text-align: center;
+            line-height: 2rem;
+        }
+    }
+}
+
+.cards {
+    display: flex;
+    .card {
+        border: thin solid rgba(0,0,0,.25);
+        width: 280px;
+        margin-right:1rem;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25),
+                              -4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    
+}
+
 @media screen and (min-width: 600px) {
     .container {
         width: 80%;
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            height: 95vh;
+        
+            .section-img {
+                width: 60%;
+                animation: horizontal-slide 1s ease forwards,
+                                  fade 1s  ease forwards;
+            }
+        
+            .page-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+        
+                .page-title {
+                    text-align: center;
+                    color: $secondaryFont;
+                    font-family: $Satisfy;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
     }
 }
 

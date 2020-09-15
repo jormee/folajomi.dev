@@ -7,17 +7,22 @@
 
     .header {
         position: relative;
-        padding: 1rem;
+        padding: 1rem 0 0;
         top: 0;
         left: 0;
         display: flex;
         align-items: baseline;
         justify-content: space-between;
-
+        
         .logo {
             z-index: 10;
-        }
+            padding: 0;
 
+            img {
+                margin: 0;
+            }
+        }
+        
         .nav {
             position: fixed;
             top: 0;
@@ -41,12 +46,17 @@
                 margin-left: 0;
 
                 .nav-item {
+                    
                     width: 40%;
                     display: none;
-                    animation: slide-up 1s .2s forwards,
+                    animation: vertical-slide 1s .2s forwards,
                                     fade 1s .2s forwards;
                     
                     .nav-link {
+                        font-size: unset;
+                        font-weight: unset;
+                        font-style: unset;
+                        color: unset;
                         position: relative;
                         text-transform: uppercase;
                         font-size: 1.5rem;
@@ -62,7 +72,7 @@
                                 left: 0;
                                 width: 100%;
                                 height: .3rem;
-                                background-color: $primaryFont;
+                                background-color: $primaryFont
                             }
                         }
                     }
@@ -84,7 +94,7 @@
                     width: 3rem;
                     height: .3rem;
                     margin-bottom: .5rem;
-                    background-image: $borderGradient;
+                    background-color: $secondaryFont;
                     transition: transform .6s ease,
                                     top .6s ease,
                                     background .6s ease;
@@ -131,7 +141,7 @@
         color: $primaryFont;
 
         .header {
-            padding: 1rem 0 0;
+            padding: 2rem 0 0;
 
             .nav {
                 position: relative;
@@ -144,6 +154,7 @@
                 &-bar {
                     flex-direction: row;
                     justify-content: space-evenly;
+                    margin-bottom: .1rem;
     
                     .nav-item {
                         margin-right: 1rem;
@@ -157,11 +168,16 @@
     
                         .nav-link {
                             font-size: .9rem;
+                            font-weight: unset;
+                            font-style: normal;
                             padding: .5rem 0 0;
 
+                            &:hover, &.active {
+                                color: $secondaryFont;
+                            }
 
-                            &::after {
-                                height: .2rem;
+                            &.active::after {
+                                background-color: $secondaryFont;
                             }
                         }
                     }
