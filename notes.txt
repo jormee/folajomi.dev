@@ -6,7 +6,8 @@
   2. download CV button on the home and about pages
   3. Add social media to nav component
   4. Fix project links size and alignment on project cards - Portfolio
-  5. Fix Footer font color.
+  5. Fix Footer font and background color.
   6. Add contact form.
   7. Add talks pages.
   8. Add 404 page.
+  9. make corrections to logo image padding

@@ -7,11 +7,14 @@
 import React from 'react'
 
 import NavContextProvider from './src/contexts/navContext'
+import ThemeContextProvider from './src/contexts/themeContext'
 
 export const wrapRootElement = ({ element }) => {
     return (
-        <NavContextProvider>
-            {element}
-        </NavContextProvider>
+        <ThemeContextProvider>
+            <NavContextProvider>
+                {element}
+            </NavContextProvider>
+        </ThemeContextProvider>
     )
 }

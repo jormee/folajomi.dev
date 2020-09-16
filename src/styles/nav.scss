@@ -14,12 +14,35 @@
         align-items: baseline;
         justify-content: space-between;
         
-        .logo {
-            z-index: 10;
-            padding: 0;
+        .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 25%;
+            .logo {
+                z-index: 10;
+                padding: 0;
+    
+                img {
+                    margin: 0;
+                }
+            }
+            .social-links {
+                display: flex;
+                justify-content: space-evenly;
+                list-style-type: none;
+                margin-left: 0;
 
-            img {
-                margin: 0;
+                .social-icon {
+                    margin-bottom: 0;
+                    
+                    svg {
+                        fill: $secondaryFont;
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+
             }
         }
         

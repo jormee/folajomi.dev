@@ -12,6 +12,17 @@ a{
     }
 }
 
+.btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    :focus {
+        outline: none;
+    }
+}
+
 .container {
     width: 90%;
     margin: auto;
