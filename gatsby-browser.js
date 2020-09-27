@@ -6,15 +6,12 @@
 // You can delete this file if you're not using it
 import React from 'react'
 
-import NavContextProvider from './src/contexts/navContext'
 import ThemeContextProvider from './src/contexts/themeContext'
 
 export const wrapRootElement = ({ element }) => {
     return (
         <ThemeContextProvider>
-            <NavContextProvider>
-                {element}
-            </NavContextProvider>
+            {element}
         </ThemeContextProvider>
     )
 }
