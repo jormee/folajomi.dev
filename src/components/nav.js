@@ -20,8 +20,7 @@ import logoDark from '../images/Logo - Dark.png'
 import '../styles/nav.scss'
 
 const Nav = ({ siteTitle }) => {
-    const { isLightTheme, themeToggle } = useContext(ThemeContext)
-    const theme = isLightTheme ? 'light' : 'dark'
+    const { theme, isLightTheme, themeToggle } = useContext(ThemeContext)
 
     return(
         

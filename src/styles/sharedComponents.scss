@@ -1,6 +1,20 @@
 @import 'typography';
 @import 'animations';
 
+
+.dark, .light {
+    transition: all .6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.dark {
+    background-color: black;
+    color: $primaryFont;
+}
+
+.light {
+    background-color: $primaryFont;
+}
+
 a{
     font-size: 1.2rem;
     font-weight: bold;
