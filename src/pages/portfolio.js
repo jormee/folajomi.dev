@@ -66,7 +66,7 @@ const Portfolio = ({ data }) => {
 
     return(
       <Layout>
-        <SEO title="portfolio" />
+        <SEO title="Portfolio" />
         <section className="portfolio">
           <div className="container">
             <div className='section-header'>

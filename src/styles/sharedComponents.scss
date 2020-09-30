@@ -7,12 +7,12 @@
 }
 
 .dark {
-    background-color: black;
+    background-color: #202020;
     color: $primaryFont;
 }
 
 .light {
-    background-color: $primaryFont;
+    background-color: #CAE5FF;
 }
 
 a{
@@ -51,6 +51,7 @@ a{
 
     .section-img {
         animation: fade 2s ease forwards;
+        overflow: hidden;
     }
 
     .page-description {
@@ -96,6 +97,7 @@ a{
         
             .section-img {
                 height: 50%;
+                width: 50%;
                 animation: horizontal-slide 2s ease forwards,
                                   fade 2s  ease forwards;
             }

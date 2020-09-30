@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
     <div className="layout">
       <div className="content">
         <Nav siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
+        <main className={`${theme}`}>{children}</main>
       </div>
       <footer className={`footer ${theme}`}>
         © {new Date().getFullYear()}, Built with
