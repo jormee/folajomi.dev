@@ -1,15 +1,12 @@
-1. Add color theme to project
-  - main: get a patterned background for light theme and plain black for dark theme.
-
   2. download CV button on the home and about pages
 
   3. Fix project links size and alignment on project cards - Portfolio
       Add follow me on github and gitlab buttons to portfolio page
-
-  4. Fix Footer font and background color.
 
   5. Add contact form.
 
   6. Add talks pages.
 
   7. Add 404 page.
+
+  add stats page

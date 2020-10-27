@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react'
 
 const defaultTheme = {
-  isLightTheme: true,
+  isLightTheme: false,
   themeToggle: ()=>{}
 }
 

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { Link } from 'gatsby'
-import Headroom from 'react-headroom'
 
 import { ThemeContext } from '../contexts/themeContext'
 
@@ -13,26 +12,26 @@ import Home from '../icons/home.svg'
 import Portfolio from '../icons/portfolio.svg'
 import Blog from '../icons/blog.svg'
 import Talks from '../icons/talk.svg'
-import About from '../icons/about.svg'
 
 import logoLight from '../images/Logo - Light.png'
 import logoDark from '../images/Logo - Dark.png'
 import '../styles/nav.scss'
 
-const Nav = ({ siteTitle }) => {
+const Nav = ({ siteTitle, route }) => {
     const { theme, isLightTheme, themeToggle } = useContext(ThemeContext)
+    const logo = isLightTheme ? logoLight : logoDark
 
     return(
         
-            <header className={`header ${theme}`}>
+            <header className={`header ${route==="Home" ? "dark" : theme}`}>
                 <div className="container">
                     <div className="links">
-                        <Link to="/" className="logo"><img alt="logo" src={isLightTheme ? logoLight : logoDark} /></Link>
+                        <Link to="/" className="logo"><img alt="logo" src={route==="Home" ? logoDark : logo} /></Link>
 
                         <ul className="social-links">
-                            <li className="social-icon"><a href='https://twitter.com/folajomi__'><Twitter /></a></li>
-                            <li className="social-icon"><a href='https://github.com/jormee'><Github /></a></li>
-                            <li className="social-icon"><a href='https://linkedin.com/in/folajomi-shotunde'><LinkedIn /></a></li>
+                            <li className="social-icon"><a href='https://twitter.com/folajomi__' aria-label="twitter-icon"><Twitter /></a></li>
+                            <li className="social-icon"><a href='https://github.com/jormee' aria-label="github-icon"><Github /></a></li>
+                            <li className="social-icon"><a href='https://linkedin.com/in/folajomi-shotunde' aria-label="linkedin-icon"><LinkedIn /></a></li>
                         </ul>
                     </div>
                     <div className="flex">
@@ -42,12 +41,6 @@ const Nav = ({ siteTitle }) => {
                                     <Link to="/" className="nav-link" activeClassName="active">
                                         <Home className="nav-icon"/>
                                         <p>Home</p>
-                                    </Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/about" className="nav-link" activeClassName="active">
-                                        <About className='nav-icon' />
-                                        <p>About</p>
                                     </Link>
                                 </li>
                                 <li className="nav-item">

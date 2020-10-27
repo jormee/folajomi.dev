@@ -53,8 +53,8 @@ const ProjectCard = ({ project }) => {
         <h3 className="project-title">{project.name}</h3>
         <p className="project-description">{project.description}</p>
         <div className="project-links">
-          <a href={project.url} target="_blank" rel="noopener noreferrer"><GitHub /></a>
-          <a href={project.homepageUrl} target="_blank" rel="noopener noreferrer"><Web /></a>
+          <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label="github-link"><GitHub /></a>
+          <a href={project.homepageUrl} target="_blank" rel="noopener noreferrer" aria-label="url"><Web /></a>
         </div>
       </div>
     </div>

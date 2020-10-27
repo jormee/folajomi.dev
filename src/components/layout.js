@@ -21,12 +21,12 @@ const Layout = ({ children }) => {
 
   const { theme } = useContext(ThemeContext)
 
+  const route = children[0].props.title
+
   return (
-    <div className="layout">
-      <div className="content">
-        <Nav siteTitle={data.site.siteMetadata.title} />
-        <main className={`${theme}`}>{children}</main>
-      </div>
+    <div className={`layout ${theme}`}>
+      <Nav siteTitle={data.site.siteMetadata.title} route={route} />
+      <main>{children}</main>
       <footer className={`footer ${theme}`}>
         © {new Date().getFullYear()}, Built with
         {` `}

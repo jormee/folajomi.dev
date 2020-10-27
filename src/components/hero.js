@@ -13,9 +13,9 @@ const Hero = () => {
                 <h2 className="name">Folajomi Shotunde</h2>
                 <div className="titles"></div>
                 <div className="socials">
-                    <a href="https://twitter.com/folajomi__" className="social-icon"><Twitter /></a>
-                    <a href="https://github.com/jormee" className="social-icon"><GitHub /></a>
-                    <a href="https://linkedin.com/in/folajomi-shotunde" className="social-icon"><LinkedIn /></a>
+                    <a href="https://twitter.com/folajomi__" className="social-icon" aria-label="twitter-icon"><Twitter /></a>
+                    <a href="https://github.com/jormee" className="social-icon" aria-label="github-icon"><GitHub /></a>
+                    <a href="https://linkedin.com/in/folajomi-shotunde" className="social-icon" aria-label="linkedin-icon"><LinkedIn /></a>
                 </div>
             </div>
         </section>
