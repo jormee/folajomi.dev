@@ -3,5 +3,3 @@
   - Add contact form.
 
   - Add stats page
-
-  - Persist theme context
