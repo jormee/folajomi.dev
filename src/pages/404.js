@@ -6,18 +6,18 @@ import SEO from "../components/seo"
 import errorImage from "../images/404.png"
 
 import "../styles/sharedComponents.scss"
-import "../styles/404.scss"
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <div className="container">
-      <div className="error-div">
+const NotFoundPage = () => {
+
+  return(
+    <Layout>
+      <SEO title="404: Not found" />
+      <div className="container do-hyeon">
         <img src={errorImage} alt="error" />
         <p className="text">You just hit a route that doesn&#39;t exist.</p>
       </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
 
 export default NotFoundPage
