@@ -9,16 +9,18 @@
 .light {
     background-color: white;
     color: #111010;
+    
+    .project-card {
+        box-shadow: 0 4px 8px 0 $boxShadowLight;
+    }
 }
 
 .dark {
     background-color: #000000;
     color: $primaryFont;
 
-    .cards {
-        .card {
-            border: thin solid $secondaryFont;
-        }
+    .project-card {
+        box-shadow: 0 4px 8px -2px rgb(59, 55, 55);
     }
 }
 
@@ -83,19 +85,6 @@ a{
             line-height: 2rem;
         }
     }
-}
-
-.cards {
-    display: flex;
-    .card {
-        border: thin solid rgba(0,0,0,.25);
-        width: 280px;
-        margin-right:1rem;
-        border-radius: 10px 10px 0 0;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25),
-                    -4px 0px 10px rgba(0, 0, 0, 0.25);
-    }
-    
 }
 
 .do-hyeon {

@@ -1,11 +1,9 @@
   - download CV button on the home and about pages
 
   - Fix project links size and alignment on project cards - Portfolio
-      Add follow me on github and gitlab buttons to portfolio page
+  - Add follow me on github and gitlab buttons to portfolio page
 
   - Add contact form.
-
-  - Add talks pages.
 
   - Add stats page
 

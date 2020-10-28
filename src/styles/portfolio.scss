@@ -4,35 +4,41 @@
 
 .project-cards {
   list-style-type: none;
-  margin-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-gap: 2rem;
+  justify-content: center;
   margin-bottom: 2rem;
   animation: fade 3s ease forwards;
 
   .project-card {
     height: 300px;
-    margin-top: 2rem;
-  
+    border: thin solid $secondaryFont;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+
     .project-image {
-      margin-bottom: 0;
-      border-radius: 10px 10px 0 0;
-      height: 50%;
-      width: 100%;;
+      margin: 1rem auto .5rem;
+      border: thin solid $secondaryFont;
+      border-radius: 50%;
+      width: 40%;
+      height: 100px;
     }
   
     .project-details {
-      padding: 0 .5rem;
-      height: 50%;
+      padding: 0 .2rem;
+      height: 40%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
   
       .project-title {
         text-align: center;
-        margin: .5rem auto;
+        margin: 0 auto .5rem;
         font-family: $Do-Hyeon;
         color: $secondaryFont;
         height: 20%;
@@ -42,19 +48,36 @@
         line-height: 1.5rem;
         text-align: center;
         font-size: .9rem;
-        height: 60%;
+        height: 80%;
       }
-  
-      .project-links {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 60%;
-        
+    }
+
+    .project-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 15%;
+      background-color: $secondaryFont;
+      
+      a {
+        margin-right: 2rem;
+        width: 36px;
+        height: 36px;
+        padding: .5rem;
+
+        &:hover {
+          border-radius: 100%;
+          background-color: rgba(255, 255, 255, .3);
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
         svg {
-          fill: $secondaryFont;
           width: 2rem;
-          height: 2rem;
+          fill: $primaryFont;
         }
       }
     }

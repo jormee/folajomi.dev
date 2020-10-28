@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { ThemeContext } from '../contexts/themeContext'
 import Nav from "./nav"
-import "../styles/themeStyles.scss"
+
 import "../styles/sharedComponents.scss"
 import "../styles/layout.scss"
 
