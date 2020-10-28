@@ -74,6 +74,7 @@ const Portfolio = ({ data }) => {
               <div className='page-description'>
                 <h1 className="page-title">Portfolio</h1>
                 <p className='section-description'>Here, you’ll find my projects (only the amazing ones). Visit my <a href='https://github.com/jormee' target='_blank' rel="noopener noreferrer">GitHub</a> and/or <a href='https://github.com/jormee' target='_blank' rel="noopener noreferrer">GitLab</a> to view a plethora of uncompleted and bizzare projects and wonderful collections of resources.</p>
+                <p className="section-description">Don't forget to hit the follow button.</p>
               </div>
             </div>
             <div>
