@@ -1,9 +1,5 @@
   - download CV button on the home page
 
-  - Add follow me on github and gitlab buttons to portfolio page
-
-  - Fix Sectiion images
-
   - Add contact form.
 
   - Add stats page
