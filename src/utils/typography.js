@@ -14,7 +14,7 @@ oceanBeach.overrideThemeStyles = ({ rhythm }, options) => ({
         "margin": "0",
         color: "unset"
     },
-    "ul": {
+    "ul, li": {
         "marginBottom": "0"
     }
 })
