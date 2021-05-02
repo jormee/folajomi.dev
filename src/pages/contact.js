@@ -24,11 +24,15 @@ const IndexPage = () => {
             <div className='page-description'>
               <h1 className='page-title'>Shoot me an Email</h1>
               <div className='section-description'>
-                <p>Hey there <span role='img' aria-labelledby="waving hand">👋🏾</span>, would you like to work together? Shoot me an email by filling out the email form below <span role='img' aria-labelledby="waving hand">👇🏾</span>.</p>
+                <p>Hey there <span role='img' aria-labelledby="waving hand">👋🏾</span>, would you like to work together? Shoot me an email by filling out the email form below <span role='img' aria-labelledby="pointing hand">👇🏾</span>.</p>
               </div>
             </div>            
           </div>
-          <form action ="#" className="email-form">
+          <form 
+            method = "post" 
+            action ="https://formspree.io/f/xrgrelrn" 
+            className="email-form"
+          >
             <h1 className="form-header">Send an Email</h1>
             <div className="text">
               <input type="text" name="name" autoComplete="off" required/>
@@ -36,7 +40,7 @@ const IndexPage = () => {
               <label htmlFor="name" className="placeholder">Name:</label>
             </div>
             <div className="text">
-              <input type="email" name="email" autoComplete="off" required/>
+              <input type="email" name="_replyto" autoComplete="off" required/>
               <span className="placeholder-icon"><Mention /></span>
               <label htmlFor="email" className="placeholder">Email:</label>
             </div>
@@ -45,6 +49,7 @@ const IndexPage = () => {
               <span className="placeholder-icon"><Mail /></span>
               <label htmlFor="message" className="placeholder">Your Message:</label>
             </div>
+            <input type="text" name="_gotcha" style={{display: "none"}} />
 
             <button className="btn btn-submit">
               <p>Send</p>

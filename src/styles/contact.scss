@@ -16,7 +16,6 @@
   .text {
     margin-bottom: 1rem;
     position: relative;
-    transition: all .6s ease;
 
     input, textarea {
       width: 100%;
@@ -31,6 +30,7 @@
 
       &:focus {
         outline: 2px solid $secondaryFont;
+        border-radius: 1rem;
       }
 
       &:focus ~ .placeholder,
@@ -54,6 +54,7 @@
       font-weight: 700;
       line-height: 2rem;
       color: #9d9d9d;
+      transition-duration: .6s;
     }
 
     .placeholder-icon {

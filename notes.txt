@@ -1,5 +1,3 @@
   - download CV button on the home page
 
-  - Add functionality to contact form.
-
   - Add stats page
