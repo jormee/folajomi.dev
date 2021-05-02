@@ -12,6 +12,7 @@ import Home from '../icons/home.svg'
 import Portfolio from '../icons/portfolio.svg'
 import Blog from '../icons/blog.svg'
 import Talks from '../icons/talk.svg'
+import Mail from '../icons/mail.svg'
 
 import logoLight from '../images/Logo - Light.png'
 import logoDark from '../images/Logo - Dark.png'
@@ -59,6 +60,12 @@ const Nav = ({ siteTitle, route }) => {
                                     <Link to="/talks" className="nav-link" activeClassName="active">
                                         <Talks className='nav-icon' />
                                         <p>Talks</p>
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/contact" className="nav-link" activeClassName="active">
+                                        <Mail className='nav-icon' />
+                                        <p>Contact</p>
                                     </Link>
                                 </li>
                             </ul>
