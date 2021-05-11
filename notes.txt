@@ -2,6 +2,4 @@
 
   - Add stats page
 
-  - Rework contacts page
-
   - change app ico
