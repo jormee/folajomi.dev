@@ -7,11 +7,12 @@
 }
 
 .light {
-    background-color: white;
+    background-color: whitesmoke;
     color: #111010;
     
     .project-card {
         box-shadow: 0 4px 8px 0 $boxShadowLight;
+        background-color: white;
     }
 }
 
@@ -20,7 +21,8 @@
     color: $primaryFont;
 
     .project-card {
-        box-shadow: 0 4px 8px -2px rgb(59, 55, 55);
+        background-color: rgb(6, 12, 16);
+        box-shadow: 0 4px 8px -2px rgb(6, 12, 16);
     }
 }
 
@@ -89,13 +91,11 @@ a{
 @media screen and (min-width: 600px) {
     .container {
         width: 80%;
+        font-size: 1.2rem;
         
         .page-header {
             .page-title {
                 text-align: center
-            }
-            .page-description {
-                font-size: 1.2rem;
             }
         }
 

@@ -5,8 +5,6 @@ import Layout from "../components/layout"
 import SEO from '../components/seo'
 import '../styles/sharedComponents.scss'
 import '../styles/portfolio.scss'
-
-import projectImg from '../images/hero-img.jpg'
 import GitHub from '../icons/github.svg'
 import Web from '../icons/link.svg'
 
@@ -47,13 +45,14 @@ const ProjectCard = ({ project }) => {
 
   return(
     <div className="project-card">
+      <img src={`https://api.apiflash.com/v1/urltoimage?access_key=${process.env.GATSBY_SCREENSHOT_ACCESS_KEY}&url=${project.homepageUrl}`} className="project-image" alt="project screenshot"/>
       <div className="project-details">
         <h3 className="project-title">{project.name}</h3>
         <p className="project-description">{project.description}</p>
-      </div>
-      <div className="project-links">
-        <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label="github-link"><GitHub /></a>
-        <a href={project.homepageUrl} target="_blank" rel="noopener noreferrer" aria-label="url"><Web /></a>
+        <div className="project-links">
+          <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label="github-link"><GitHub /></a>
+          <a href={project.homepageUrl} target="_blank" rel="noopener noreferrer" aria-label="url"><Web /></a>
+        </div>
       </div>
     </div>
   )

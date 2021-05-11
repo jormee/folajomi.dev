@@ -3,7 +3,5 @@
   - Add stats page
 
   - Rework contacts page
-  - Rework portfolio page
-      Portfolio cards should have lighter background
 
   - change app ico
