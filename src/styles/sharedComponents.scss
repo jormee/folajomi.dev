@@ -84,6 +84,19 @@ a{
             text-align: left;
         }
     }
+
+    .shipping {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 85vh;
+        font-weight: 700;
+        font-family: $Gayathri;
+        letter-spacing: .2rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
 }
 
 

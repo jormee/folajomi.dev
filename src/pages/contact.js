@@ -7,7 +7,6 @@ import Send from '../icons/send.svg'
 import Mail from '../icons/mail.svg'
 import Mention from '../icons/mention.svg'
 import User from '../icons/user.svg'
-import contactImg from '../images/contact.png'
 
 
 import '../styles/sharedComponents.scss'
