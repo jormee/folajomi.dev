@@ -1,5 +1,1 @@
-  - download CV button on the home page
-
-  - Add stats page
-
-  - change app ico
+- Add stats page

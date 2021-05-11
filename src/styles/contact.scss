@@ -13,15 +13,15 @@
   }
 
   .text {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     position: relative;
 
     input, textarea {
       width: 100%;
       height: 3rem;
       border: none;
-      background-color: #ededed;
       border-radius: .5rem;
+      border-bottom: thin solid #9d9d9d;
       color: $secondaryFont;
       font-size: 1.1rem;
       font-weight: 700;
@@ -29,18 +29,19 @@
 
       &:focus {
         outline: none;
+        border-bottom: 2px solid $secondaryFont;
       }
 
       &:focus ~ .placeholder,
       &:valid ~ .placeholder {
         left: .5rem;
-        top: -.5rem;
+        top: -2rem;
         font-size: .7rem;
       }
     }
 
     textarea {
-      height: 20rem;
+      min-height: 10rem;
     }
 
     .placeholder {
@@ -67,7 +68,7 @@
   }
 
   .btn-submit {
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,0);
     border: thin solid $secondaryFont;
     padding: .5rem .5rem;
     color: $secondaryFont;

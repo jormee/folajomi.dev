@@ -5,7 +5,6 @@ import SEO from "../components/seo"
 import Emblem from '../images/emblem.png'
 
 import Github from '../icons/github.svg'
-import Behance from '../icons/behance.svg'
 import Blog from '../icons/blog.svg'
 import Thoughts from '../icons/thoughts.svg'
 
@@ -25,40 +24,49 @@ const IndexPage = () => {
       <SEO title="About Me" />
         <div className="container about">
 
-          <img src={Emblem} alt="page-logo" />
           <div className="page">
+            <img src={Emblem} alt="page-logo" className="page-image"/>
             <section className="page-header">
               <h1 className='page-title'>About Me</h1>
               <p className="page-description">
                 Hey there <span role='img' aria-labelledby="waving hand">👋</span>, I'm Folajomi Shotunde, Web Designer, Front-End Web developer and Project Manager from Lagos, Nigeria.
               </p>
+              <div className="resume">
+                <a href="https://www.dropbox.com/preview/Docs/PM/CV/Shotunde%20Folajomi%20-%20CV.pdf?role=personal" target="_blank" rel="noreferrer noopener" className="btn">View Resume</a>
+              </div>
             </section>
 
             <div>
               <section className="page-section">
                 <h2 className="section-title">Spaces</h2>
                 <ul className="spaces">
-                  <li className="space">
-                    <p className="space-icon"><Github /></p>
-                    <p className="space-name">Github</p>
-                  </li>
-                  <li className="space">
-                    <p className="space-icon"><Behance /></p>
-                    <p className="space-name">Behance</p>
-                  </li>
-                  <li className="space">
-                    <p className="space-icon"><Blog /></p>
-                    <p className="space-name">Blog</p>
-                  </li>
-                  <li className="space">
-                    <p className="space-icon"><Thoughts /></p>
-                    <p className="space-name">Thoughts</p>
-                  </li>
+
+                  <a href="https://github.com/jormee">
+                    <li className="space">
+                      <p className="space-icon"><Github /></p>
+                      <p className="space-name">Github</p>
+                    </li>
+                  </a>
+                  
+                  <a href="https://blog.folajomi.dev">
+                    <li className="space">
+                      <p className="space-icon"><Blog /></p>
+                      <p className="space-name">Blog</p>
+                    </li>
+                  </a>
+
+                  <a href="https://thoughts.folajomi.dev">
+                    <li className="space">
+                      <p className="space-icon"><Thoughts /></p>
+                      <p className="space-name">Thoughts</p>
+                    </li>
+                  </a>
+
                 </ul>
               </section>
 
               <section className="page-section">
-                <h2 className="section-title">Stack</h2>
+                <h2 className="section-title">Tools</h2>
                 <ul className="stack">
                   <li className="space">
                     <p className="space-icon"><LogoJs /></p>
