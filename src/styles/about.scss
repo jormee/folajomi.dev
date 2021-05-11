@@ -1,0 +1,50 @@
+@import 'typography';
+
+.about {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.spaces, .stack {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-left: 0;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: baseline;
+
+  .space {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 1rem;
+
+    :last-child {
+      margin-right: 0;
+    }
+
+    .space-icon {
+      margin: 0;
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: $secondaryFont;
+      }
+    }
+  }
+}
+
+@media screen and
+  (min-width: 600px) {
+    .spaces, .stack {
+      justify-content: center;
+
+      .space {
+        align-items: center;
+      }
+    }
+}

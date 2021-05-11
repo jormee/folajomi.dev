@@ -8,7 +8,7 @@ import Twitter from '../icons/twitter-alt.svg'
 import LinkedIn from '../icons/linkedin.svg'
 import Crescent from '../icons/crescent.svg'
 import Sun from '../icons/sun.svg'
-import Home from '../icons/home.svg'
+import User from '../icons/user.svg'
 import Portfolio from '../icons/portfolio.svg'
 import Blog from '../icons/blog.svg'
 import Talks from '../icons/talk.svg'
@@ -39,9 +39,9 @@ const Nav = ({ siteTitle, route }) => {
                         <nav className={`nav ${theme}`}>
                             <ul className="nav-bar">
                                 <li className="nav-item">
-                                    <Link to="/" className="nav-link" activeClassName="active">
-                                        <Home className="nav-icon"/>
-                                        <p>Home</p>
+                                    <Link to="/about" className="nav-link" activeClassName="active">
+                                        <User className="nav-icon"/>
+                                        <p>About</p>
                                     </Link>
                                 </li>
                                 <li className="nav-item">

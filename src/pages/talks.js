@@ -10,10 +10,10 @@ import "../styles/sharedComponents.scss"
 const Talks = () => (
   <Layout>
     <SEO title="Talks" />
-    <div className="container do-hyeon">
+    <section className="container do-hyeon">
       <img src={shipping} alt="shipping soon" />
       <p className="text">This page will be shipping soon... Stay tuned.</p>
-    </div>
+    </section>
   </Layout>
 )
 

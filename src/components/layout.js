@@ -27,10 +27,8 @@ const Layout = ({ children }) => {
     <div className={`layout ${theme}`}>
       <Nav siteTitle={data.site.siteMetadata.title} route={route} />
       <main>{children}</main>
-      <footer className={`footer ${theme}`}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a> by {data.site.siteMetadata.author}
+      <footer>
+        &copy;{new Date().getFullYear()}. Powered by <a href="https://gatsbyjs.org" target="_blank" rel="noreferrer noopener">Gatsby</a>
       </footer>
     </div>
   )
