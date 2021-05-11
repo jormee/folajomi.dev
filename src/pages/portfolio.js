@@ -7,7 +7,6 @@ import '../styles/sharedComponents.scss'
 import '../styles/portfolio.scss'
 
 import projectImg from '../images/hero-img.jpg'
-import portfolioImg from '../images/portfolio.png'
 import GitHub from '../icons/github.svg'
 import Web from '../icons/link.svg'
 
@@ -48,7 +47,6 @@ const ProjectCard = ({ project }) => {
 
   return(
     <div className="project-card">
-      <img className="project-image" src={projectImg} alt="project" />
       <div className="project-details">
         <h3 className="project-title">{project.name}</h3>
         <p className="project-description">{project.description}</p>
@@ -69,22 +67,24 @@ const Portfolio = ({ data }) => {
         <SEO title="Portfolio" />
         <div className="container">
 
-          <section className='page-header'>
-            <h1 className="page-title">Portfolio</h1>
-            <p className='page-description'>
-              Here, you’ll find my projects (only the amazing ones). Visit my <a href='https://github.com/jormee' target='_blank' rel="noopener noreferrer">GitHub</a> and/or <a href='https://github.com/jormee' target='_blank' rel="noopener noreferrer">GitLab</a> to view a plethora of uncompleted and bizzare projects and wonderful collections of resources.
-            </p>
-            <p className="section-description">
-              Don't forget to hit the follow button.
-            </p>
-          </section>
-          <section className="portfolio">
-            <ul className='project-cards'>
-              {
-                projectsData.map(project => <li key={project.name}><ProjectCard project={project}/></li>)
-              }
-            </ul>
-          </section>
+          <div className="page">
+            <section className='page-header'>
+              <h1 className="page-title">Portfolio</h1>
+              <p className='page-description'>
+                Here, you’ll find my projects (only the amazing ones). Visit my <a href='https://github.com/jormee' target='_blank' rel="noopener noreferrer">GitHub</a> and/or <a href='https://github.com/jormee' target='_blank' rel="noopener noreferrer">GitLab</a> to view a plethora of uncompleted and bizzare projects and wonderful collections of resources.
+              </p>
+              <p className="page-description">
+                Don't forget to hit the follow button.
+              </p>
+            </section>
+            <section className="portfolio">
+              <ul className='project-cards'>
+                {
+                  projectsData.map(project => <li key={project.name}><ProjectCard project={project}/></li>)
+                }
+              </ul>
+            </section>
+          </div>
         </div>
       </Layout>
     )
